@@ -1,0 +1,75 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: UbuntuMono, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    min-height: 0; 
+    border-radius: 0px;
+}
+
+@import '../../.cache/wal/colors-waybar.css';
+
+window#waybar {
+    background-color: @color0;
+         
+}
+
+button:hover {
+    background-color: transparent;
+    color: transparent;
+}
+
+
+/* you can set a style on hover for any module like this */
+
+#tags button {
+    color: @color2;
+}
+
+
+#tags button.focused {
+    background-color: @color1;
+    color: @color0;
+}
+
+
+#tags button:not(.occupied):not(.focused) {
+  font-size: 0;
+  min-width: 0;
+  min-height: 0;
+  margin: -17px;
+  padding: 0;
+  color: transparent;
+  background-color: transparent;
+}
+
+#tags button.urgent {
+  background: @color2;
+}
+
+#clock,
+#cpu,
+#memory,
+#disk,
+#workspaces,
+#network,
+#pulseaudio,
+#tray {
+    padding: 0 5px;
+    color: @color0;
+    background-color: @color1;
+}
+
+#memory:hover {
+    background-color: @color12;
+}
+
+
+#network:hover {
+    background-color: @color12;
+}
+
+#pulseaudio:hover {
+    background-color: @color12;
+}
+
+

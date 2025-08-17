@@ -1,0 +1,15 @@
+[[mgr.prepend_keymap]]
+on  = "y"
+run = [ 'shell -- for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list', "yank" ]
+
+[[mgr.prepend_keymap]]
+on  = "<C-n>"
+run = 'shell -- dragon-drop -x -i -T "$1"'
+
+[[mgr.prepend_keymap]]
+on  = "<C-m>"
+run = "plugin mount"
+
+[[mgr.prepend_keymap]]
+on = "<C-c>"
+run = ["plugin system-clipboard"]

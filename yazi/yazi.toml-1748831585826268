@@ -1,0 +1,26 @@
+[opener]
+
+edit = [
+	{ run = 'nvim "$@"', block = true, for = "unix" },
+	{ run = "%EDITOR% %*",  block = true, for = "windows" },
+]
+
+Wine = [
+	{ run = 'wine "$@"', desc = "Open wine" },	
+]
+
+images = [
+    { run = 'qimgv "$@"', desc = "Abrir image viewver" },
+]
+
+[open]
+
+prepend_rules = [
+	{ name = "*.exe", use = "Wine" },
+	{ mime = "image/*", use = "images" }
+]
+
+[manager]
+linemode = "size"
+sort_by = "mtime"
+sort_reverse = true
